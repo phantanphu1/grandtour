@@ -1,0 +1,19 @@
+.fixed-menu {
+    position: absolute;
+  top: 150px;
+  width: 40px;
+  border-right: 0;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 9;
+  float: left;
+  box-shadow: 0 3px 15px rgba(0,0,0,.1);
+  border-radius: 5px 0px 0px 5px;
+  }
+  
+  .fixed-menu i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+  }

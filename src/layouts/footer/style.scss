@@ -1,0 +1,124 @@
+.footer__wrapper {
+  width: 100%;
+  background-color: black;
+
+  .Footer__item {
+    padding: 10px;
+    color: var(--white-text);
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-align: justify;
+      opacity: 0.8;
+      margin: 10px 0px;
+    }
+
+    .footer__award__img {
+      width: 60%;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .footer__contact__item {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      align-items: center;
+      opacity: 0.8;
+      margin: 10px 0px;
+
+      .icon {
+        font-size: 1rem;
+        margin: 0px 10px 0px 0px;
+      }
+    }
+
+    .social__media {
+      display: flex;
+      max-width: 100%;
+      flex-wrap: wrap;
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0px 10px 0px 0px;
+        overflow: hidden;
+      }
+    }
+
+    .footer__img {
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .footer__container {
+    gap: 10px !important;
+    margin-left: -12px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+
+  .footer__line {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 1px;
+    margin-bottom: 10px;
+    background-color: rgb(179, 173, 173);
+  }
+
+  .footer__end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    color: var(--white-text);
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    .End__title {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .footer__nav__menu {
+      ul {
+        li {
+          a {
+            color: #ffff;
+            font-size: 10px;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        display: none !important;
+      }
+
+      ul {
+        width: 100%;
+        display: flex;
+        li {
+          margin-left: 10px;
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+    }
+  }
+}

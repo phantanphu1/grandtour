@@ -1,0 +1,110 @@
+.card__besttrip {
+
+  .card__content{
+      &:hover {
+
+    .card__price{
+      transform: scale(1.2);
+      left: 4px !important;
+    }
+
+    
+  }
+  }
+
+ 
+  
+
+  .card__img__wrapper{
+
+    .card__price{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        padding: 4px 10px;
+        background-color: red;
+        z-index: 1;
+       
+        transition: all 0.3s ease;
+
+        .card__initial__price{
+          color: rgb(136, 131, 131);
+          font-size: 600;
+          font-weight: 1.2rem;
+          margin-right: 4px;
+          text-align: center;
+          position: relative;
+
+          &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            border-top: 1px solid rgb(254, 254, 254);
+            transform: translateY(-50%);
+          }
+        }
+
+        .card__reduced__price{
+          color: var(--white-text);
+          font-size: 600;
+          font-weight: 1.2rem;
+        }
+    }
+
+    .card__sale{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(0, 255, 85);
+      color: var(--white-text);
+      border-radius: 50%;
+      right: -25px;
+      top: -25px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+  }
+
+  
+
+ 
+
+  .card__footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 16px 20px 16px;
+
+    .card__duration, .card__review{
+      font-size: 0.8rem;
+      line-height: 1rem;
+      font-weight: 600;
+      color: var(--black-text);
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 50%;
+
+      .card__duration__icon{
+        margin: 0 6px;
+        
+      }
+
+      .card__star__icon{
+        margin-right: 4px;
+        display: flex;
+        
+        align-items: center;
+        color: rgb(8, 255, 255);
+      }
+
+    }
+  }
+}

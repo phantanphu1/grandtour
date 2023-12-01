@@ -1,0 +1,247 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--height-header);
+    background-color: transparent;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.5s ease;
+    animation: showHeader 0.5s ease forwards;
+  
+  
+  
+    &__logo {
+      height: 60%;
+      padding: 10px;
+      @media (min-width: 1200px) {
+        height: 80%;
+        padding: 10px;
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__menu__wrapper {
+      display: flex;
+      .header__menu {
+        display: flex;
+        @media (max-width: 992px) {
+          display: none;
+        }
+        li {
+          padding: 0 10px;
+          list-style: none;
+          cursor: pointer;
+          position: relative;
+          display: flex;
+          align-items: center;
+  
+          &:hover {
+            .menu__children {
+              display: block;
+              user-select: auto;
+            }
+          }
+  
+          .menu__title {
+            color: var(--white-text);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            margin: 0 8px;
+            @media (min-width: 1200px) {
+              font-size: 1rem;
+            }
+          }
+  
+          .menu__icon {
+            position: relative;
+            top: -2px;
+            font-size: 0.8rem;
+            @media (min-width: 1200px) {
+              font-size: 1rem;
+              top: 0;
+            }
+            color: var(--white-text);
+          }
+          //css children menu
+          .menu__children {
+            position: absolute;
+            top: 150%;
+            left: 0;
+            padding: 0px 20px;
+            background-color: var(--white-background);
+            border-radius: 5px;
+            display: none;
+            user-select: none;
+            animation: showMenu 0.5s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.393);
+  
+            &::before {
+              content: "";
+              position: absolute;
+              width: 140px;
+              height: 100%;
+              height: var(--height-header);
+              background-color: transparent;
+              top: -20px;
+              left: 0;
+            }
+  
+            ul {
+              min-width: 200px;
+              height: 100%;
+  
+              li {
+                padding: 10px 0px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.488);
+                display: flex;
+                align-items: center;
+                font-size: 0.8rem;
+                font-weight: 500;
+                position: relative;
+                justify-content: space-between;
+                @media (min-width: 1200px) {
+                  font-size: 1rem;
+                }
+                a {
+                  text-transform: capitalize;
+                  white-space: nowrap;
+                  transition: color 0.5s linear;
+  
+                  color: var(--black-text);
+                }
+                &:last-child {
+                  border-bottom: 1px solid transparent !important;
+                }
+                .menu__children__icon {
+                  font-size: 1rem;
+                  color: var(--black-text);
+                  margin: 0 0 0 10px;
+                }
+  
+                &:hover {
+                  .menu__children__title,
+                  .menu__children__icon {
+                    color: red !important;
+                  }
+  
+                  .menu__sub{
+                    display: block;
+                  }
+                }
+  
+                //css sub menu
+                .menu__sub {
+                  position: absolute;
+                  left: calc(100% + 20px);
+                  top: 0;
+                  padding: 0px 20px;
+                  background-color: var(--white-background);
+                  border-radius: 5px;
+                  display: none;
+                  user-select: none;
+                  animation: showMenu 0.5s ease-in-out;
+                  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.393);
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    top: 0;
+                    left: -50%;
+                  }
+  
+                  li{
+                    
+                    .menu__sub__icon {
+                      font-size: 1rem;
+                      color: var(--black-text);
+                      padding: 0 0 0 10px;
+                      
+                    }
+                    &:hover{
+                      .menu__sub__title,
+                      .menu__sub__icon {
+                        color: red !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+  
+          &:last-child {
+            .menu__children {
+              right: 0;
+              left: inherit;
+              &::before {
+                right: 0;
+                left: inherit;
+              }
+            }
+          }
+        }
+      }
+      .header__icon__nav {
+        display: flex;
+  
+        .icon_nav {
+          font-size: 1.2rem;
+          color: var(--white-text);
+          margin: 0px 6px;
+          cursor: pointer;
+          transition: transform 0.5s linear;
+  
+          &:active {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
+  
+  .color{
+    background-color: black;
+    position: relative;
+  
+    &::before{
+      content:"";
+      position: absolute;
+      width:100vw;
+      height: 100%;
+      top:0;
+      left: 0;
+      background-color: black;
+      z-index:0;
+    }
+  }
+  
+  @keyframes showMenu {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes showHeader {
+    from {
+      top: -100px;
+    }
+    to {
+      top: 0;
+    }
+  }
+  
