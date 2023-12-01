@@ -5,9 +5,13 @@ import NotFound from "../pages/not_found";
 
 
 export const route = {
-    home: {
-        path : path.home,
+    homepage: {
+        path : path.homepage,
         element: <Home />
+    },
+    home:{
+        path:path.home,
+        element:<Home/>
     },
     notFound: {
         path : path.notFound,

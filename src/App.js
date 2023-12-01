@@ -40,6 +40,7 @@ function App() {
         {isHeaderVisible && <Header isColor={isColor} />}
 
         <Routes>
+          <Route path={route.homepage.path} element={route.homepage.element} />
           <Route path={route.home.path} element={route.home.element} />
           <Route path={route.notFound.path} element={route.notFound.element} />
         </Routes>
