@@ -10,9 +10,7 @@
     z-index: 1000;
     transition: all 0.5s ease;
     animation: showHeader 0.5s ease forwards;
-  
-  
-  
+
     &__logo {
       height: 60%;
       padding: 10px;
@@ -193,7 +191,6 @@
       }
       .header__icon__nav {
         display: flex;
-  
         .icon_nav {
           font-size: 1.2rem;
           color: var(--white-text);

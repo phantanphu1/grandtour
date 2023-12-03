@@ -5,6 +5,7 @@ import {
   faMobileScreenButton,
   faLocationDot,
   faClock,
+  
 } from "@fortawesome/free-solid-svg-icons";
 
 import { FaFacebook, FaPinterest } from "react-icons/fa";
