@@ -3,7 +3,7 @@
   background-color: black;
 
   .Footer__item {
-    padding: 10px;
+    // padding: 10px;
     color: var(--white-text);
     h4 {
       font-size: 1.2rem;
@@ -20,6 +20,7 @@
 
     .footer__award__img {
       width: 60%;
+      padding-top: 20px;
       img {
         width: 100%;
         height: auto;
@@ -37,7 +38,7 @@
 
       .icon {
         font-size: 1rem;
-        margin: 0px 10px px 0px;
+        margin: 0px 10px 0px 0px;
       }
     }
 
@@ -45,12 +46,37 @@
       display: flex;
       max-width: 100%;
       flex-wrap: wrap;
-      .icon {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        margin: 0px 10px 0px 0px;
-        overflow: hidden;
+      padding-top: 20px;
+      span {
+        i {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin: 0px 10px 0px 0px;
+          text-align: center;
+          line-height: 40px;
+          color: #fff !important;
+        }
+        .fa-facebook-f {
+          font-size: 20px;
+          background-color: #2d5f9a;
+        }
+        .fa-twitter {
+          font-size: 20px;
+          background-color: #00C3F3;
+        }
+        .fa-youtube {
+          font-size: 20px;
+          background-color: #cc181e;
+        }
+        .fa-pinterest-p {
+          font-size: 20px;
+          background-color: #bd081c;
+        }
+        .fa-instagram {
+          font-size: 20px;
+          background-color: #405de6;
+        }
       }
     }
 
@@ -120,4 +146,10 @@
       }
     }
   }
+}
+.container_menu{
+  z-index: 1000;
+  width: 50%;
+  height: 100%;
+  background-color: red;
 }

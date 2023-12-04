@@ -5,11 +5,8 @@ import {
   faMobileScreenButton,
   faLocationDot,
   faClock,
-  
 } from "@fortawesome/free-solid-svg-icons";
 
-import { FaFacebook, FaPinterest } from "react-icons/fa";
-import { CiTwitter, CiYoutube, CiInstagram } from "react-icons/ci";
 const Footer = () => {
   return (
     <div className="footer__wrapper">
@@ -53,33 +50,20 @@ const Footer = () => {
             <span>Mon - Sat 8.00 - 18.00 Sunday CLOSED</span>
           </div>
           <div className="social__media">
-            <span >
-           <FaFacebook
-                className="icon"
-                style={{ color: "#2d5f9a",background:"#ffff"}}
-                />
+            <span>
+              <i class="fa-brands fa-facebook-f"></i>
             </span>
             <span>
-              {" "}
-              <CiTwitter
-                className="icon"
-                style={{ color: "#ffff", backgroundColor: "#02c3f3" }}
-              />
+              <i class="fa-brands fa-twitter"></i>
             </span>
             <span>
-              {" "}
-              <CiYoutube
-                className="icon"
-                style={{ color: "#ffff", backgroundColor: "#cc171f" }}
-              />
+              <i class="fa-brands fa-youtube"></i>
             </span>
             <span>
-              {" "}
-              <FaPinterest className="icon" style={{ color: "#ffff",backgroundColor:"#cc171f" }} />
+              <i class="fa-brands fa-pinterest-p"></i>
             </span>
             <span>
-              {" "}
-              <CiInstagram className="icon" style={{ color: "#ffff",backgroundColor:"#405de6" }} />
+              <i class="fa-brands fa-instagram"></i>
             </span>
           </div>
         </div>
